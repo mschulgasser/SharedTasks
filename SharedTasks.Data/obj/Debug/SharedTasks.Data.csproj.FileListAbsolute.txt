@@ -1,0 +1,6 @@
+c:\users\malka\documents\visual studio 2015\Projects\SharedTasks\SharedTasks.Data\bin\Debug\SharedTasks.Data.dll.config
+c:\users\malka\documents\visual studio 2015\Projects\SharedTasks\SharedTasks.Data\bin\Debug\SharedTasks.Data.dll
+c:\users\malka\documents\visual studio 2015\Projects\SharedTasks\SharedTasks.Data\bin\Debug\SharedTasks.Data.pdb
+c:\users\malka\documents\visual studio 2015\Projects\SharedTasks\SharedTasks.Data\obj\Debug\SharedTasks.Data.csprojResolveAssemblyReference.cache
+c:\users\malka\documents\visual studio 2015\Projects\SharedTasks\SharedTasks.Data\obj\Debug\SharedTasks.Data.dll
+c:\users\malka\documents\visual studio 2015\Projects\SharedTasks\SharedTasks.Data\obj\Debug\SharedTasks.Data.pdb

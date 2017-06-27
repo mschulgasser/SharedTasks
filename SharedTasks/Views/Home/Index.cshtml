@@ -1,0 +1,57 @@
+﻿@using SharedTasks.Data;
+@using SharedTasks.Models;
+@model IndexViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <div class="well col-md-10 col-md-offset-1">
+        <form method="post" action="/home/addtask">
+            <div class="col-md-10">
+                <input type="text" class="form-control" placeholder="Task Title" name="title" />
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-info">Add Task</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <table class="table table-bordered table-hover table-striped">
+            <tr>
+                <th>Task Title</th>
+                <th>Status</th>
+            </tr>
+            @foreach (Task t in Model.Tasks)
+            {
+            <tr>
+                <td>@t.Title</td>
+                <td>
+                    @if (t.User == null)
+                    {
+                        <button class="btn btn-primary reserve" data-task-id="@t.Id">I'll do this one</button>
+                    }
+                    else if (t.User.Id == Model.User.Id)
+                    {
+                        <button class="btn btn-success complete" data-task-id="@t.Id">I'm done</button>
+                    }
+                    else
+                    {
+                        <button disabled class="btn btn-danger">@t.User.FirstName @t.User.LastName is doing this one</button>
+                    }
+                </td>
+            </tr>
+            }
+        </table> 
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="/Scripts/index.js"></script>
+}
